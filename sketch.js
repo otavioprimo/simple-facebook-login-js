@@ -1,6 +1,6 @@
 window.fbAsyncInit = function () {
   FB.init({
-    appId: '2401113739913777',
+    appId: '285285855520342',
     autoLogAppEvents: true,
     xfbml: true,
     version: 'v3.1'
@@ -21,12 +21,12 @@ window.fbAsyncInit = function () {
 function loginFacebook() {
   FB.login(function (response) {
     if (response.authResponse) {
-      console.log('Welcome!  Fetching your information.... ');
-      FB.api('/me', function (response) {
-        console.log('Good to see you, ' + response.name + '.');
+      console.log(response);
+      // FB.api('/me', function (response) {
+      //   console.log('Good to see you, ' + response.name + '.');
 
-        document.getElementById("name").innerHTML = `Logado como ${response.name}`;
-      });
+      //   document.getElementById("name").innerHTML = `Logado como ${response.name}`;
+      // });
     } else {
       console.log('User cancelled login or did not fully authorize.');
     }
